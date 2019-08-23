@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<TabPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <Tab text="Temple" closable="false" fx:id="gameTab" >
+        <GridPane fx:id="gameGridPane">
+            <children>
+                <Pane GridPane.columnIndex="0" GridPane.rowIndex="0"
+                      GridPane.columnSpan="3" GridPane.rowSpan="2" fx:id="gamePane">
+                    <ImageView fx:id="backgroundImageIV" fitHeight="100" fitWidth="100">
+                        <image>
+                            <Image fx:id="backgroundImage" url="/main/resources/bobcat.png"/>
+                        </image>
+                    </ImageView>
+                </Pane>
+                <TextArea GridPane.columnIndex="0" GridPane.rowIndex="2"
+                          GridPane.columnSpan="2" GridPane.rowSpan="1"
+                          editable="false" fx:id="promptTextArea">
+
+                </TextArea>
+                <Button text="Interact" GridPane.columnIndex="2" GridPane.rowIndex="2"
+                        GridPane.halignment="CENTER" fx:id="interactButton" onAction="#interactClicked"/>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33.3"/>
+                <ColumnConstraints percentWidth="33.3"/>
+                <ColumnConstraints percentWidth="33.3"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints percentHeight="33.3"/>
+                <RowConstraints percentHeight="33.3"/>
+                <RowConstraints percentHeight="33.3"/>
+            </rowConstraints>
+        </GridPane>
+    </Tab>
+    <Tab text="Status" closable="false" fx:id="statusTab" onSelectionChanged="#statusUpdate">
+        <GridPane fx:id="test">
+            <children>
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <ImageView fx:id="playerImageIV"></ImageView>
+                    <Label text="Player Name" fx:id="nameLabel"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label text="HP: " fx:id="healthLabel"/>
+                    <Label text="strength: " fx:id="strengthLabel"/>
+                    <Label text="toughness" fx:id="toughnessLabel"/>
+                    <Label text="speed" fx:id="speedLabel"/>
+                </VBox>
+                <ListView GridPane.columnIndex="0" GridPane.rowIndex="1"
+                          GridPane.columnSpan="2">
+
+                </ListView>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33.3"/>
+                <ColumnConstraints percentWidth="66.6"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints percentHeight="50"/>
+                <RowConstraints percentHeight="50"/>
+            </rowConstraints>
+        </GridPane>
+    </Tab>
+</TabPane>

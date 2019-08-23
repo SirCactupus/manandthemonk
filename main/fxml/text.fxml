@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:controller="main.java.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center" spacing="10">
+    <Label text="After the man beat the squid and dove further,"/>
+    <Label text="he discovered the key to enlightenment."/>
+    <Label text="That would be shown to you right now,"/>
+    <Label text="but as the monk said in the beginning,"/>
+    <Label text="the key to enlightenment is something you have"/>
+    <Label text="to experience for yourself. It is not something"/>
+    <Label text="that I can tell to you."/>
+</VBox>
